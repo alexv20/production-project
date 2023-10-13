@@ -1,0 +1,27 @@
+.InputWrapper {
+  display: flex;
+  column-gap: 10px;
+}
+
+.placeholder {
+  padding-top: 5px;
+  flex-shrink: 0;
+}
+
+.Input {
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  width: 100%;
+  color: var(--primary-color);
+  padding: 5px 10px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.readonly {
+  opacity: 0.7;
+}

@@ -1,0 +1,33 @@
+.ProfileCard {
+  padding: 20px;
+  border: 2px solid var(--inverted-bg-color);
+}
+
+.input {
+  margin-bottom: 10px;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.avatar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.editing {
+  border: 3px solid var(--inverted-primary-color);
+
+  .input {
+    &:focus {
+      border: 2px solid var(--primary-color);
+    }
+  }
+}

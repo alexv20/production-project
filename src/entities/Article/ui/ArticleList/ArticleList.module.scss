@@ -1,0 +1,13 @@
+.LIST {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.GRID {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 30px;
+  column-gap: 30px;
+}
