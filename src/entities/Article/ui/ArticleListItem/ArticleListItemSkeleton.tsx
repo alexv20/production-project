@@ -58,6 +58,7 @@ export const ArticleListSkeletonItem = memo((props: ArticleListItemSkeletonProps
   }
 
   return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <></>
   );
 });

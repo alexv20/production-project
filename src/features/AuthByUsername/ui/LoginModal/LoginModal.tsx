@@ -1,8 +1,8 @@
 import React, { Suspense, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { LoginFormAsync } from 'features/AuthByUsername/ui/LoginForm/LoginForm.async';
 import { Loader } from 'shared/ui/Loader/Loader';
+import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 
 interface LoginModalProps {
   className?: string,

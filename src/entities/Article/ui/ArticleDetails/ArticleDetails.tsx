@@ -6,9 +6,6 @@ import {
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import {
-  fetchArticleById,
-} from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
 import { useSelector } from 'react-redux';
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
@@ -16,7 +13,10 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import ViewIcon from 'shared/assets/icons/articles/details/views.svg';
 import DateIcon from 'shared/assets/icons/articles/details/date.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
-import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import {
+  fetchArticleById,
+} from '../../model/services/fetchArticleById/fetchArticleById';
 import {
   ArticleTextBlockComponent,
 } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';

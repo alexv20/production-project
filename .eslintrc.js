@@ -22,6 +22,7 @@ module.exports = {
     '@typescript-eslint',
     'i18next',
     'react-hooks',
+    'relative-paths-slice-fsd',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -59,6 +60,7 @@ module.exports = {
     'jsx-a11y/no-autofocus': 'warn',
     'no-undef': 'off',
     'react/no-array-index-key': 'warn',
+    'relative-paths-slice-fsd/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,

@@ -17,18 +17,17 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button } from 'shared/ui/Button/Button';
 import { Page } from 'widgets/Page/Page';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
+import { getArticleRecommendations } from '../../model/slice/articleDetailsRecommendationsSlice';
 import {
   getArticleRecommendationsIsLoading,
-} from 'pages/ArticleDetailsPage/model/selectors/recommendations';
-import {
-  getArticleRecommendations,
-} from 'pages/ArticleDetailsPage/model/slice/articleDetailsRecommendationsSlice';
+} from '../../model/selectors/recommendations';
+
 import {
   fetchArticleRecommendations,
-} from 'pages/ArticleDetailsPage/model/services/fetchArticleRecommendations/fetchArticleRecommendations';
+} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import {
   ArticleDetailsPageHeader,
-} from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+} from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import {
   addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle';
