@@ -13,6 +13,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import ViewIcon from 'shared/assets/icons/articles/details/views.svg';
 import DateIcon from 'shared/assets/icons/articles/details/date.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import {
   fetchArticleById,
@@ -73,13 +74,13 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   let content;
   if (isLoading) {
     content = (
-      <>
+      <VStack max gap="16">
         <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
         <Skeleton className={cls.title} width={300} height={32} />
         <Skeleton className={cls.skeleton} width={600} height={24} />
         <Skeleton className={cls.skeleton} width="100%" height={200} />
         <Skeleton className={cls.skeleton} width="100%" height={200} />
-      </>
+      </VStack>
     );
   } else if (error) {
     content = (
@@ -89,37 +90,39 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   } else {
     content = (
       // eslint-disable-next-line i18next/no-literal-string
-      <>
-        <div className={cls.avatarWrapper}>
+      <VStack>
+        <HStack justify="center" max className={cls.avatarWrapper}>
           <Avatar
             size={200}
             src={article?.img}
             alt="article-img"
           />
-        </div>
-        <Text
-          title={article?.title}
-          text={article?.subtitle}
-          size={TextSize.L}
-        />
-        <div className={cls.articleInfo}>
-          <Icon Svg={ViewIcon} />
-          <Text text={String(article?.views)} />
-        </div>
-        <div className={cls.articleInfo}>
-          <Icon Svg={DateIcon} />
-          <Text text={article?.createdAt} />
-        </div>
+        </HStack>
+        <VStack gap="4" max>
+          <Text
+            title={article?.title}
+            text={article?.subtitle}
+            size={TextSize.L}
+          />
+          <HStack gap="8" className={cls.articleInfo}>
+            <Icon Svg={ViewIcon} />
+            <Text text={String(article?.views)} />
+          </HStack>
+          <HStack gap="8" className={cls.articleInfo}>
+            <Icon Svg={DateIcon} />
+            <Text text={article?.createdAt} />
+          </HStack>
+        </VStack>
         {article?.blocks.map(renderBlock)}
-      </>
+      </VStack>
     );
   }
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ArticleDetails, {}, [className])}>
+      <VStack gap="16" max className={classNames(cls.ArticleDetails, {}, [className])}>
         {content}
-      </div>
+      </VStack>
     </DynamicModuleLoader>
   );
 });

@@ -3,23 +3,9 @@
   border: 2px solid var(--inverted-bg-color);
 }
 
-.input {
-  margin-bottom: 10px;
-}
-
 .loading,
 .error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 200px;
-}
-
-.avatar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
 .editing {
