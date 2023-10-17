@@ -1,0 +1,64 @@
+.ListBox {
+  position: relative;
+  width: fit-content;
+}
+
+.trigger {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.options {
+  background-color: var(--listbox-bg);
+  position: absolute;
+  z-index: 999;
+  border-radius: 12px;
+  min-width: 100%;
+  width: fit-content;
+}
+
+.item {
+  padding: 8px 8px;
+  width: 100%;
+  border-radius: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.checkIcon {
+  fill: var(--primary-color);
+  grid-column: 1 / 2;
+}
+
+.itemText {
+  grid-column: 2 / 3;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.label {
+
+}
+
+.active {
+  background-color: var(--inverted-primary-color);
+}
+
+.disabled {
+  opacity: .5;
+}
+
+.optionsTop {
+  bottom: 100%;
+}
