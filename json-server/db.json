@@ -631,6 +631,12 @@
       "userId": "1",
       "text": "cad",
       "id": "iPEXqtw"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "fdsfds",
+      "id": "uhZpsMh"
     }
   ],
   "users": [
@@ -652,12 +658,12 @@
   "profile": [
     {
       "id": "1",
-      "firstname": "jgh",
-      "lastname": "asf",
-      "age": 465,
-      "currency": "RUB",
+      "firstname": "alex12",
+      "lastname": "vasiliev",
+      "age": 25,
+      "currency": "EUR",
       "country": "Russia",
-      "city": "Moscow",
+      "city": "Kazan",
       "username": "admin213",
       "avatar": "https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png"
     },

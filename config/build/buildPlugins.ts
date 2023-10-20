@@ -40,5 +40,11 @@ export function buildPlugins(
     }));
   }
 
+  if (!isDev) {
+    plugins.push(new BundleAnalyzerPlugin({
+      openAnalyzer: true,
+    }));
+  }
+
   return plugins;
 }

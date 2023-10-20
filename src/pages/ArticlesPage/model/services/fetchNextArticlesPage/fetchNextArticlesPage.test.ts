@@ -22,9 +22,7 @@ describe('fetchNextArticlesPage.test', () => {
     expect(thunk.dispatch)
       .toBeCalledTimes(4);
     expect(fetchArticlesList)
-      .toBeCalledWith({
-        page: 3,
-      });
+      .toBeCalledWith({});
   });
 
   test('not called without has more', async () => {
