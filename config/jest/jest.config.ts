@@ -41,7 +41,15 @@ export default {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
-
+  reporters: [
+    'default',
+    ['jest-html-reporters', {
+      publicPath: '<rootDir>/report/unit',
+      filename: 'report.html',
+      openReport: true,
+      inlineSource: true,
+    }],
+  ],
   transformIgnorePatterns: ['node_modules/(?!axios)'],
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
