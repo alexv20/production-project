@@ -24,15 +24,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { className } = props;
   const { id } = useParams<{id: string}>();
 
-  if (!id) {
-    return (
-      // eslint-disable-next-line i18next/no-literal-string
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        Статья не найдена
-      </div>
-    );
-  }
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>

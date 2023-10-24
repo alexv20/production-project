@@ -37,7 +37,7 @@ export const CommentList = memo((props: CommentListProps) => {
               isLoading={isLoading}
             />
           ))
-          : <Text />
+          : <Text text={t('Комментарии отсутствуют')} />
       }
     </VStack>
   );

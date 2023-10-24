@@ -4,7 +4,7 @@ import { Profile } from 'entities/Profile';
 
 export const fetchProfileData = createAsyncThunk<
   Profile,
-  string,
+  string | undefined,
   ThunkConfig<string>
   >(
     'profile/fetchProfileData',
