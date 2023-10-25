@@ -2,7 +2,7 @@ import React, { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextSize } from 'shared/ui/Text/Text';
-import { ArticleView } from 'entities/Article';
+import { ArticleView } from '../../model/consts/consts';
 import {
   ArticleListSkeletonItem,
 } from '../ArticleListItem/ArticleListItemSkeleton';

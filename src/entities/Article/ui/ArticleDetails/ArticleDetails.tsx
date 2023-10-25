@@ -14,7 +14,7 @@ import ViewIcon from 'shared/assets/icons/articles/details/views.svg';
 import DateIcon from 'shared/assets/icons/articles/details/date.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { HStack, VStack } from 'shared/ui/Stack';
-import { ArticleBlockType } from 'entities/Article/model/consts/consts';
+import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleBlock } from '../../model/types/article';
 import {
   fetchArticleById,
