@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { ArticleType } from 'entities/Article';
+import { ArticleType } from '@/entities/Article';
 import { Tabs } from './Tabs';
 
 export default {

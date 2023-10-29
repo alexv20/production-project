@@ -1,9 +1,9 @@
 import React from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { VStack } from 'shared/ui/Stack';
-import { Text, TextSize } from 'shared/ui/Text/Text';
-import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { VStack } from '@/shared/ui/Stack';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { ArticleList } from '@/entities/Article/ui/ArticleList/ArticleList';
 import { useArticleRecommendationsList } from '../api/articleRecommendationsApi';
 import cls from './ArticleRecommendationsList.module.scss';
 

@@ -1,8 +1,8 @@
 import React, { ReactNode, useCallback } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Card, CardTheme } from 'shared/ui/Card/Card';
-import { ArticleType } from 'entities/Article';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Card, CardTheme } from '@/shared/ui/Card/Card';
+import { ArticleType } from '@/entities/Article';
 import cls from './Tabs.module.scss';
 
 export interface TabItem<T extends ArticleType> {

@@ -1,10 +1,10 @@
 import React, { Fragment, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
-import CheckIcon from 'shared/assets/icons/check.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/Button/Button';
-import { HStack } from 'shared/ui/Stack';
-import { DropdownDirection } from 'shared/types/ui';
+import CheckIcon from '@/shared/assets/icons/check.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button } from '@/shared/ui/Button/Button';
+import { HStack } from '@/shared/ui/Stack';
+import { DropdownDirection } from '@/shared/types/ui';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../styles/consts';
 import popupCls from '../styles/popup.module.scss';
