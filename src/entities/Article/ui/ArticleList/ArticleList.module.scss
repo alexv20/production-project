@@ -1,3 +1,7 @@
+.ArticleList {
+  padding-top: 15px;
+}
+
 .LIST {
   display: flex;
   flex-direction: column;
@@ -5,9 +9,8 @@
 }
 
 .GRID {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  row-gap: 30px;
-  column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 230px);
+  gap: 30px;
+  justify-content: space-between;
 }

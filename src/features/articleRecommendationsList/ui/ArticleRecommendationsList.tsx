@@ -5,6 +5,7 @@ import { VStack } from 'shared/ui/Stack';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { ArticleList } from 'entities/Article/ui/ArticleList/ArticleList';
 import { useArticleRecommendationsList } from '../api/articleRecommendationsApi';
+import cls from './ArticleRecommendationsList.module.scss';
 
 interface ArticleRecommendationsListProps {
   className?: string
@@ -29,6 +30,7 @@ export const ArticleRecommendationsList = (props: ArticleRecommendationsListProp
         articles={articles}
         isLoading={isLoading}
         target="_blank"
+        className={cls.list}
       />
     </VStack>
   );
