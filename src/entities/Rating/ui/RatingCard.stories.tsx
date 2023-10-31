@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Rating } from './Rating';
+import { Rating } from './RatingCard';
 
 export default {
   title: 'slice/Rating',
