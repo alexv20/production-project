@@ -5,10 +5,10 @@ import { Text } from '@/shared/ui/Text/Text';
 import DefaultAvatar from '@/shared/assets/default-user-avatar.png';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { VStack } from '@/shared/ui/Stack';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
+import { RoutePath } from '@/shared/const/router';
 
 interface CommentCardProps {
   className?: string;

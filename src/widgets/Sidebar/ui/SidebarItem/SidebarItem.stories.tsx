@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import StoryIcon from '@/shared/assets/icons/home.svg';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
+import { RoutePath } from '@/shared/const/router';
 
 export default {
   title: 'widgets/Sidebar/SidebarItem',
