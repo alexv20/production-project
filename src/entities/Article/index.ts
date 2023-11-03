@@ -18,3 +18,5 @@ export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 export { ArticleView } from './model/consts/consts';
 export { ArticleType } from './model/consts/consts';
 export { ArticleSortField } from './model/consts/consts';
+export { ArticleList } from './ui/ArticleList/ArticleList';
+export { ArticleBlockType } from './model/consts/consts';

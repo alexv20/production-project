@@ -73,7 +73,26 @@ module.exports = {
     'jsx-a11y/no-autofocus': 'warn',
     'no-undef': 'off',
     'react/no-array-index-key': 'warn',
-    'relative-paths-slice-fsd/path-checker': ['error', { alias: '@' }],
+    'relative-paths-slice-fsd/path-checker': [
+      'error',
+      {
+        alias: '@',
+      },
+    ],
+    'relative-paths-slice-fsd/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
+    'relative-paths-slice-fsd/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

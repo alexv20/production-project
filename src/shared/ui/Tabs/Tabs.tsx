@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Card, CardTheme } from '../Card/Card';
+// eslint-disable-next-line relative-paths-slice-fsd/layer-imports
 import { ArticleType } from '@/entities/Article';
 import cls from './Tabs.module.scss';
 

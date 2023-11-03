@@ -9433,10 +9433,10 @@ eslint-plugin-react@^7.29.2:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.6"
 
-eslint-plugin-relative-paths-slice-fsd@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-relative-paths-slice-fsd/-/eslint-plugin-relative-paths-slice-fsd-0.0.4.tgz#b5def6b7850c0d975e3db3e34335ef380c2a525d"
-  integrity sha512-rPTOx9Y/xUrPYCnokf/6HR8M/attCAey/DF0LBbbQaP4quiDzd0NqONp2qPqnrv06qmjdQYTABQxI1ylbNEisQ==
+eslint-plugin-relative-paths-slice-fsd@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-relative-paths-slice-fsd/-/eslint-plugin-relative-paths-slice-fsd-0.0.5.tgz#1446f2ac6fa5cb4279b20182d7f996bc69309f5b"
+  integrity sha512-56+4ZMez9/o+UrBPGeA/qJz77sWOoNzpJ+V6sBobSIahf+hWarP/Pc3/I163GKxUmZuamY/GlBzVgWlhm9Y+jg==
   dependencies:
     micromatch "^4.0.5"
     requireindex "^1.2.0"

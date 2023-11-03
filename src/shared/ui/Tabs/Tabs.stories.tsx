@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+// eslint-disable-next-line relative-paths-slice-fsd/layer-imports
 import { ArticleType } from '@/entities/Article';
 import { Tabs } from './Tabs';
 
