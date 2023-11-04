@@ -23,6 +23,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'relative-paths-slice-fsd',
+    'unused-imports',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -73,6 +74,7 @@ module.exports = {
     'jsx-a11y/no-autofocus': 'warn',
     'no-undef': 'off',
     'react/no-array-index-key': 'warn',
+    'unused-imports/no-unused-imports': 'error',
     'relative-paths-slice-fsd/path-checker': [
       'error',
       {

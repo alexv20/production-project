@@ -9433,13 +9433,25 @@ eslint-plugin-react@^7.29.2:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.6"
 
-eslint-plugin-relative-paths-slice-fsd@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-relative-paths-slice-fsd/-/eslint-plugin-relative-paths-slice-fsd-0.0.5.tgz#1446f2ac6fa5cb4279b20182d7f996bc69309f5b"
-  integrity sha512-56+4ZMez9/o+UrBPGeA/qJz77sWOoNzpJ+V6sBobSIahf+hWarP/Pc3/I163GKxUmZuamY/GlBzVgWlhm9Y+jg==
+eslint-plugin-relative-paths-slice-fsd@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-relative-paths-slice-fsd/-/eslint-plugin-relative-paths-slice-fsd-0.0.8.tgz#ce808fcc23a4fe8783f1b86cc71491b437deed38"
+  integrity sha512-ny+mDmVJA11BruyJbfjeYY/Q35MKwkdjmDSo+qQ1fBiKqvlY6KStJiX6wpr9ldV9yMtF+XNJu6yw+/oEABQizw==
   dependencies:
     micromatch "^4.0.5"
     requireindex "^1.2.0"
+
+eslint-plugin-unused-imports@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unused-imports/-/eslint-plugin-unused-imports-3.0.0.tgz#d25175b0072ff16a91892c3aa72a09ca3a9e69e7"
+  integrity sha512-sduiswLJfZHeeBJ+MQaG+xYzSWdRXoSw61DpU13mzWumCkR0ufD0HmO4kdNokjrkluMHpj/7PJeN35pgbhW3kw==
+  dependencies:
+    eslint-rule-composer "^0.3.0"
+
+eslint-rule-composer@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-rule-composer/-/eslint-rule-composer-0.3.0.tgz#79320c927b0c5c0d3d3d2b76c8b4a488f25bbaf9"
+  integrity sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==
 
 eslint-scope@5.1.1, eslint-scope@^5.1.1:
   version "5.1.1"
