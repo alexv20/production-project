@@ -4,7 +4,7 @@ import StoryIcon from '@/shared/assets/icons/home.svg';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteMain } from '@/shared/const/router';
 import { Theme } from '@/shared/const/theme';
 
 export default {
@@ -21,7 +21,7 @@ export const Light = Template.bind({});
 Light.args = {
   item: {
     text: 'Main',
-    path: RoutePath.main,
+    path: getRouteMain(),
     Icon: StoryIcon,
   },
   collapsed: false,
@@ -34,7 +34,7 @@ export const LightCollapsed = Template.bind({});
 LightCollapsed.args = {
   item: {
     text: 'Main',
-    path: RoutePath.main,
+    path: getRouteMain(),
     Icon: StoryIcon,
   },
   collapsed: true,
@@ -47,7 +47,7 @@ export const Dark = Template.bind({});
 Dark.args = {
   item: {
     text: 'Main',
-    path: RoutePath.main,
+    path: getRouteMain(),
     Icon: StoryIcon,
   },
   collapsed: false,
@@ -61,7 +61,7 @@ export const DarkCollapsed = Template.bind({});
 DarkCollapsed.args = {
   item: {
     text: 'Main',
-    path: RoutePath.main,
+    path: getRouteMain(),
     Icon: StoryIcon,
   },
   collapsed: true,

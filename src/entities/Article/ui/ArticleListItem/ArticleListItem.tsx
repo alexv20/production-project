@@ -18,7 +18,7 @@ import {
 
 } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleDetails } from '@/shared/const/router';
 
 interface ArticleListItemProps {
   className?: string;
@@ -48,7 +48,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
   if (view === ArticleView.GRID) {
     return (
       <AppLink
-        to={RoutePath.article_details + article.id}
+        to={getRouteArticleDetails(article.id)}
         className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         target={target}
       >
@@ -91,7 +91,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           }
           <div className={cls.footer}>
             <AppLink
-              to={RoutePath.article_details + article.id}
+              to={getRouteArticleDetails(article.id)}
               target={target}
             >
               <Button
