@@ -194,4 +194,4 @@ Clear.args = {
 - [LangSwitcher](/src/features/LangSwitcher)
 - [notificationButton](/src/features/notificationButton)
 - [ThemeSwitcher](/src/features/ThemeSwitcher)
-- [ScrollSave](/src/features/UI)
+- [ScrollSave](/src/features/ScrollSave)
