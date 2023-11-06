@@ -1,31 +1,27 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ArticleViewSelector } from './ArticleViewSelector';
+import { ArticleSortSelector } from './ArticleSortSelector';
 import { Theme } from '@/shared/const/theme';
 
 export default {
-  title: 'entities/Article/ArticleViewSelector',
-  component: ArticleViewSelector,
+  title: 'features/ArticleSortSelector',
+  component: ArticleSortSelector,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
   args: {
     to: '/',
   },
-} as ComponentMeta<typeof ArticleViewSelector>;
+} as ComponentMeta<typeof ArticleSortSelector>;
 
-const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;
+const Template: ComponentStory<typeof ArticleSortSelector> = (args) => <ArticleSortSelector {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {
-
-};
+Normal.args = {};
 
 export const Dark = Template.bind({});
-Dark.args = {
-
-};
+Dark.args = {};
 Dark.decorators = [
   ThemeDecorator(Theme.DARK),
 ];

@@ -12,9 +12,6 @@ export {
   getArticleDetailsIsLoading,
 } from './model/selectors/articleDetails';
 
-export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector';
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 export { ArticleView } from './model/consts/consts';
 export { ArticleType } from './model/consts/consts';
 export { ArticleSortField } from './model/consts/consts';
