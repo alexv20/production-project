@@ -7660,10 +7660,10 @@ eslint-plugin-react@^7.29.2:
     semver "^6.3.0"
     string.prototype.matchall "^4.0.6"
 
-eslint-plugin-relative-paths-slice-fsd@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.npmjs.org/eslint-plugin-relative-paths-slice-fsd/-/eslint-plugin-relative-paths-slice-fsd-0.0.11.tgz"
-  integrity sha512-uPjr1RJIlJSKtq96bTKGtWT3M7IrbV9X9k78D8cGYhvXVP3bfpTeEazvCnfOC5QcfNzu4R+07VD3XXOOGSDtdw==
+eslint-plugin-relative-paths-slice-fsd@0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-relative-paths-slice-fsd/-/eslint-plugin-relative-paths-slice-fsd-0.0.12.tgz#4ec6dd14052e02e9e81d6702f778236418a10bea"
+  integrity sha512-AHCPSMltdU0s9rVmyddJ1PiEfL8u7CkAIEbtKbSNdoBK7jK7unMA79hJis3oBoZ/mZyDDGkhvZaPWp4NGW9nVA==
   dependencies:
     micromatch "^4.0.5"
     requireindex "^1.2.0"
