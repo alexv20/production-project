@@ -13,11 +13,12 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-      }}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+        }}
       >
         <Story />
       </div>
@@ -25,7 +26,9 @@ export default {
   ],
 } as ComponentMeta<typeof ListBox>;
 
-const Template: ComponentStory<typeof ListBox> = (args) => <ListBox {...args} />;
+const Template: ComponentStory<typeof ListBox> = (args) => (
+  <ListBox {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {

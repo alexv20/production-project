@@ -7,7 +7,9 @@ import '@/app/styles/index.scss';
 import './shared/config/i18n/i18n';
 import { ErrorBoundary } from './app/providers/ErrorBoundary';
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement,
+);
 
 root.render(
   <BrowserRouter>

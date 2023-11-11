@@ -30,48 +30,50 @@ const reducers: ReducersList = {
   addCommentForm: addCommentFormReducer,
 };
 
-const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) => {
-  const { t } = useTranslation();
-  const dispatch = useAppDispatch();
+const AddCommentForm = memo(
+  ({ className, onSendComment }: AddCommentFormProps) => {
+    const { t } = useTranslation();
+    const dispatch = useAppDispatch();
 
-  const text = useSelector(getAddCommentFormText);
-  const error = useSelector(getAddCommentFormError);
-  const isLoading = useSelector(getAddCommentFormIsLoading);
+    const text = useSelector(getAddCommentFormText);
+    const error = useSelector(getAddCommentFormError);
+    const isLoading = useSelector(getAddCommentFormIsLoading);
 
-  const onCommentTextChange = useCallback((value: string) => {
-    dispatch(addCommentFormActions.setText(value));
-  }, [dispatch]);
+    const onCommentTextChange = useCallback(
+      (value: string) => {
+        dispatch(addCommentFormActions.setText(value));
+      },
+      [dispatch],
+    );
 
-  const onSendHandler = useCallback(() => {
-    onSendComment(text || '');
-    onCommentTextChange('');
-  }, [onCommentTextChange, onSendComment, text]);
+    const onSendHandler = useCallback(() => {
+      onSendComment(text || '');
+      onCommentTextChange('');
+    }, [onCommentTextChange, onSendComment, text]);
 
-  return (
-    <DynamicModuleLoader reducers={reducers}>
-      <HStack
-        justify="between"
-        max
-        className={classNames(cls.addCommentForm, {}, [className])}
-        data-testid="AddCommentForm"
-      >
-        <Input
-          className={cls.input}
-          placeholder={t('Введите текст комментария...')}
-          defaultPlaceholder
-          value={text}
-          onChange={onCommentTextChange}
-          data-testid="AddCommentForm.Input"
-        />
-        <Button
-          onClick={onSendHandler}
-          data-testid="AddCommentForm.Button"
+    return (
+      <DynamicModuleLoader reducers={reducers}>
+        <HStack
+          justify="between"
+          max
+          className={classNames(cls.addCommentForm, {}, [className])}
+          data-testid="AddCommentForm"
         >
-          {t('Отправить')}
-        </Button>
-      </HStack>
-    </DynamicModuleLoader>
-  );
-});
+          <Input
+            className={cls.input}
+            placeholder={t('Введите текст комментария...')}
+            defaultPlaceholder
+            value={text}
+            onChange={onCommentTextChange}
+            data-testid="AddCommentForm.Input"
+          />
+          <Button onClick={onSendHandler} data-testid="AddCommentForm.Button">
+            {t('Отправить')}
+          </Button>
+        </HStack>
+      </DynamicModuleLoader>
+    );
+  },
+);
 
 export default AddCommentForm;

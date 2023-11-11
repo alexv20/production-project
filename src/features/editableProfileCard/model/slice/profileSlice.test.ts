@@ -1,6 +1,9 @@
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import { ProfileSchema, ValidateProfileErrors } from '../types/editableProfileCardSchema';
+import {
+  ProfileSchema,
+  ValidateProfileErrors,
+} from '../types/editableProfileCardSchema';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { profileActions, profileReducer } from './profileSlice';
 
@@ -18,10 +21,7 @@ describe('profileSlice.test', () => {
   test('test set readonly', () => {
     const state: DeepPartial<ProfileSchema> = { readonly: false };
     expect(
-      profileReducer(
-        state as ProfileSchema,
-        profileActions.setReadonly(true),
-      ),
+      profileReducer(state as ProfileSchema, profileActions.setReadonly(true)),
     ).toEqual({ readonly: true });
   });
 

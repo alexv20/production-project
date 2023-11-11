@@ -18,7 +18,7 @@ interface RatingProps {
   hasFeedback?: boolean;
   onCancel?: (starsCount: number) => void;
   onAccept?: (starsCount: number, feedback?: string) => void;
-  rate?: number
+  rate?: number;
 }
 
 export const RatingCard = memo((props: RatingProps) => {
@@ -37,14 +37,17 @@ export const RatingCard = memo((props: RatingProps) => {
   const [starsCount, setStarsCount] = useState(rate);
   const [feedback, setFeedback] = useState('');
 
-  const onSelectStars = useCallback((selectedStarsCount: number) => {
-    setStarsCount(selectedStarsCount);
-    if (hasFeedback) {
-      setIsModalOpen(true);
-    } else {
-      onAccept?.(selectedStarsCount);
-    }
-  }, [hasFeedback, onAccept]);
+  const onSelectStars = useCallback(
+    (selectedStarsCount: number) => {
+      setStarsCount(selectedStarsCount);
+      if (hasFeedback) {
+        setIsModalOpen(true);
+      } else {
+        onAccept?.(selectedStarsCount);
+      }
+    },
+    [hasFeedback, onAccept],
+  );
 
   const acceptHandle = useCallback(() => {
     setIsModalOpen(false);
@@ -58,9 +61,7 @@ export const RatingCard = memo((props: RatingProps) => {
 
   const modalContent = (
     <>
-      <Text
-        title={feedbackTitle}
-      />
+      <Text title={feedbackTitle} />
       <Input
         data-testid="RatingCard.Input"
         value={feedback}
@@ -71,10 +72,18 @@ export const RatingCard = memo((props: RatingProps) => {
   );
 
   return (
-    <Card className={classNames('', {}, [className])} max data-testid="RatingCard">
+    <Card
+      className={classNames('', {}, [className])}
+      max
+      data-testid="RatingCard"
+    >
       <VStack align="center" gap="8">
         <Text title={starsCount ? t('Спасибо за оценку!') : title} />
-        <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
+        <StarRating
+          selectedStars={starsCount}
+          size={40}
+          onSelect={onSelectStars}
+        />
       </VStack>
       <BrowserView>
         <Modal isOpen={isModalOpen} lazy>
@@ -88,10 +97,7 @@ export const RatingCard = memo((props: RatingProps) => {
               >
                 {t('Закрыть')}
               </Button>
-              <Button
-                onClick={acceptHandle}
-                data-testid="RatingCard.Send"
-              >
+              <Button onClick={acceptHandle} data-testid="RatingCard.Send">
                 {t('Отправить')}
               </Button>
             </HStack>

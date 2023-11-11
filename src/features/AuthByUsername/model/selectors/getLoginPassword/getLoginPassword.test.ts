@@ -1,7 +1,5 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
-import {
-  getLoginPassword,
-} from '../getLoginPassword/getLoginPassword';
+import { getLoginPassword } from '../getLoginPassword/getLoginPassword';
 
 describe('getLoginIsLoading.test', () => {
   test('should return 123', () => {

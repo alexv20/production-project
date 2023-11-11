@@ -12,19 +12,19 @@ import cls from './ProfileCard.module.scss';
 import { Profile } from '../../model/types/profile';
 
 interface ProfileCardProps {
-  className?: string
-  data?: Profile
-  isLoading?: boolean,
-  error?: string,
-  readonly?: boolean,
-  onChangeFirstname?: (value?: string) => void,
-  onChangeLastname?: (value?: string) => void,
-  onChangeAge?: (value?: string) => void
-  onChangeCity?: (value?: string) => void
-  onChangeAvatar?: (value?: string) => void
-  onChangeUsername?: (value?: string) => void
-  onChangeCurrency?: (value?: Currency) => void
-  onChangeCountry?: (value?: Country) => void
+  className?: string;
+  data?: Profile;
+  isLoading?: boolean;
+  error?: string;
+  readonly?: boolean;
+  onChangeFirstname?: (value?: string) => void;
+  onChangeLastname?: (value?: string) => void;
+  onChangeAge?: (value?: string) => void;
+  onChangeCity?: (value?: string) => void;
+  onChangeAvatar?: (value?: string) => void;
+  onChangeUsername?: (value?: string) => void;
+  onChangeCurrency?: (value?: Currency) => void;
+  onChangeCountry?: (value?: Country) => void;
 }
 
 export const ProfileCard: FC<ProfileCardProps> = (props) => {
@@ -52,7 +52,12 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
 
   if (isLoading) {
     return (
-      <HStack justify="center" align="center" max className={classNames(cls.ProfileCard, {}, [className, cls.loading])}>
+      <HStack
+        justify="center"
+        align="center"
+        max
+        className={classNames(cls.ProfileCard, {}, [className, cls.loading])}
+      >
         <Loader />
       </HStack>
     );
@@ -63,7 +68,10 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
       <VStack
         justify="center"
         max
-        className={classNames(cls.ProfileCard, { [cls.error]: true }, [className, cls.error])}
+        className={classNames(cls.ProfileCard, { [cls.error]: true }, [
+          className,
+          cls.error,
+        ])}
       >
         <Text
           theme={TextTheme.ERROR}
@@ -76,19 +84,16 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
   }
 
   return (
-    <VStack gap="8" max className={classNames(cls.ProfileCard, mods, [className])}>
-      {
-        data?.avatar
-          && (
-            <HStack justify="center" max className={cls.avatar}>
-              <Avatar
-                src={data.avatar}
-                alt="avatar"
-                size={150}
-              />
-            </HStack>
-          )
-      }
+    <VStack
+      gap="8"
+      max
+      className={classNames(cls.ProfileCard, mods, [className])}
+    >
+      {data?.avatar && (
+        <HStack justify="center" max className={cls.avatar}>
+          <Avatar src={data.avatar} alt="avatar" size={150} />
+        </HStack>
+      )}
       <Input
         value={data?.firstname}
         placeholder={t('Имя')}

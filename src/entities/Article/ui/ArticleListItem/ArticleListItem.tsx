@@ -9,14 +9,8 @@ import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { AppLink } from '@/shared/ui/AppLink';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
-import {
-  ArticleTextBlockComponent,
-} from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import {
-  Article,
-  ArticleTextBlock,
-
-} from '../../model/types/article';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { getRouteArticleDetails } from '@/shared/const/router';
 import { AppImage } from '@/shared/ui/AppImage/AppImage';
@@ -30,12 +24,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-  const {
-    className,
-    article,
-    view = ArticleView.GRID,
-    target,
-  } = props;
+  const { className, article, view = ArticleView.GRID, target } = props;
 
   const { t } = useTranslation();
 
@@ -55,9 +44,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         target={target}
         data-testid="ArticleListItem"
       >
-        <Card
-          className={cls.card}
-        >
+        <Card className={cls.card}>
           <div className={cls.imageWrapper}>
             <AppImage
               src={article.img}
@@ -78,8 +65,9 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
   }
 
   if (view === ArticleView.LIST) {
-    const textBlock = article.blocks
-      .find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
+    const textBlock = article.blocks.find(
+      (block) => block.type === ArticleBlockType.TEXT,
+    ) as ArticleTextBlock;
 
     return (
       <div
@@ -88,7 +76,11 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
       >
         <Card className={cls.card}>
           <div className={cls.header}>
-            <Avatar size={30} src={article.user.avatar} className={cls.avatar} />
+            <Avatar
+              size={30}
+              src={article.user.avatar}
+              className={cls.avatar}
+            />
             <Text text={article.user.username} className={cls.username} />
             <Text text={article.createdAt} className={cls.date} />
           </div>
@@ -100,19 +92,15 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             className={cls.img}
             fallback={<Skeleton width="100%" height={250} />}
           />
-          {
-            textBlock && (
-              <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
-            )
-          }
+          {textBlock && (
+            <ArticleTextBlockComponent
+              block={textBlock}
+              className={cls.textBlock}
+            />
+          )}
           <div className={cls.footer}>
-            <AppLink
-              to={getRouteArticleDetails(article.id)}
-              target={target}
-            >
-              <Button
-                theme={ButtonTheme.OUTLINE}
-              >
+            <AppLink to={getRouteArticleDetails(article.id)} target={target}>
+              <Button theme={ButtonTheme.OUTLINE}>
                 {t('Читать далее...')}
               </Button>
             </AppLink>

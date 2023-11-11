@@ -7,18 +7,18 @@ import cls from './ArticleImageBlockComponent.module.scss';
 
 interface ArticleImageBlockComponentProps {
   className?: string;
-  block: ArticleImageBlock
+  block: ArticleImageBlock;
 }
 
 export const ArticleImageBlockComponent = memo(
   ({ className, block }: ArticleImageBlockComponentProps) => {
     const { t } = useTranslation();
     return (
-      <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])}>
+      <div
+        className={classNames(cls.ArticleImageBlockComponent, {}, [className])}
+      >
         <img src={block.src} alt={block.title} className={cls.img} />
-        {block.title && (
-          <Text text={block.title} align={TextAlign.CENTER} />
-        )}
+        {block.title && <Text text={block.title} align={TextAlign.CENTER} />}
       </div>
     );
   },

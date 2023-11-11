@@ -17,21 +17,25 @@ interface AvatarProps {
 export const Avatar = (props: AvatarProps) => {
   const mods: Mods = {};
 
-  const {
-    className,
-    src,
-    alt,
-    size,
-    fallbackInverted,
-  } = props;
+  const { className, src, alt, size, fallbackInverted } = props;
 
-  const styles = useMemo<CSSProperties>(() => ({
-    width: size,
-    height: size,
-  }), [size]);
+  const styles = useMemo<CSSProperties>(
+    () => ({
+      width: size,
+      height: size,
+    }),
+    [size],
+  );
 
   const fallback = <Skeleton width={size} height={size} border="50%" />;
-  const errorFallback = <Icon inverted={fallbackInverted} Svg={AvatarLogo} width={size} height={size} />;
+  const errorFallback = (
+    <Icon
+      inverted={fallbackInverted}
+      Svg={AvatarLogo}
+      width={size}
+      height={size}
+    />
+  );
 
   return (
     <AppImage

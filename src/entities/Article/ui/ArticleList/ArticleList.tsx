@@ -3,9 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/Text';
 import { ArticleView } from '../../model/consts/consts';
-import {
-  ArticleListSkeletonItem,
-} from '../ArticleListItem/ArticleListItemSkeleton';
+import { ArticleListSkeletonItem } from '../ArticleListItem/ArticleListItemSkeleton';
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
@@ -18,11 +16,10 @@ interface ArticleListProps {
   target?: HTMLAttributeAnchorTarget;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.GRID ? 9 : 3)
-  .fill(0)
-  .map((item, index) => (
-    <ArticleListSkeletonItem key={index} view={view} />
-  ));
+const getSkeletons = (view: ArticleView) =>
+  new Array(view === ArticleView.GRID ? 9 : 3)
+    .fill(0)
+    .map((item, index) => <ArticleListSkeletonItem key={index} view={view} />);
 
 export const ArticleList = memo((props: ArticleListProps) => {
   const {
@@ -58,9 +55,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
       className={classNames(cls.ArticleList, {}, [className, cls[view]])}
       data-testid="ArticleList"
     >
-      {articles
-        ? articles.map(renderArticle)
-        : null}
+      {articles ? articles.map(renderArticle) : null}
       {isLoading && getSkeletons(view)}
     </div>
   );

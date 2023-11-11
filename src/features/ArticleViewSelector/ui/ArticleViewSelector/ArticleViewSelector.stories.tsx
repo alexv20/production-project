@@ -15,17 +15,13 @@ export default {
   },
 } as ComponentMeta<typeof ArticleViewSelector>;
 
-const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;
+const Template: ComponentStory<typeof ArticleViewSelector> = (args) => (
+  <ArticleViewSelector {...args} />
+);
 
 export const Normal = Template.bind({});
-Normal.args = {
-
-};
+Normal.args = {};
 
 export const Dark = Template.bind({});
-Dark.args = {
-
-};
-Dark.decorators = [
-  ThemeDecorator(Theme.DARK),
-];
+Dark.args = {};
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

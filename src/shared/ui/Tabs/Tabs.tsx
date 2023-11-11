@@ -8,25 +8,20 @@ import cls from './Tabs.module.scss';
 
 export interface TabItem<T extends ArticleType> {
   value: T;
-  content: ReactNode
+  content: ReactNode;
 }
 
 interface TabsProps<T extends ArticleType> {
   className?: string;
-  tabs: TabItem<T>[]
-  value: string
-  onTabClick: (tab: TabItem<T>) => void
+  tabs: TabItem<T>[];
+  value: string;
+  onTabClick: (tab: TabItem<T>) => void;
 }
 
 export const Tabs = <T extends ArticleType>(props: TabsProps<T>) => {
   const { t } = useTranslation();
 
-  const {
-    className,
-    tabs,
-    value,
-    onTabClick,
-  } = props;
+  const { className, tabs, value, onTabClick } = props;
 
   const clickHandle = (tab: TabItem<T>) => () => {
     onTabClick(tab);

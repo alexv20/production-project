@@ -20,8 +20,8 @@ import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
-  className?: string,
-  onSuccess: () => void
+  className?: string;
+  onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
@@ -37,13 +37,19 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   const isLoading = useSelector(getLoginIsLoading);
   const error = useSelector(getLoginError);
 
-  const onChangeUsername = useCallback((value: string) => {
-    dispatch(loginActions.setUsername(value));
-  }, [dispatch]);
+  const onChangeUsername = useCallback(
+    (value: string) => {
+      dispatch(loginActions.setUsername(value));
+    },
+    [dispatch],
+  );
 
-  const onChangePassword = useCallback((value: string) => {
-    dispatch(loginActions.setPassword(value));
-  }, [dispatch]);
+  const onChangePassword = useCallback(
+    (value: string) => {
+      dispatch(loginActions.setPassword(value));
+    },
+    [dispatch],
+  );
 
   const onLoginClick = useCallback(async () => {
     const result = await dispatch(loginByUsername({ username, password }));
@@ -53,20 +59,16 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
   }, [onSuccess, dispatch, username, password]);
 
   return (
-    <DynamicModuleLoader
-      reducers={initialReducers}
-      removeAfterUnmount
-    >
+    <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
       <VStack gap="8" className={classNames('', {}, [className])}>
         <Text title={t('Форма авторизации')} className={cls.title} />
-        {error
-          && (
-            <Text
-              text={t('Неверный логин или пароль')}
-              theme={TextTheme.ERROR}
-              className={cls.error}
-            />
-          )}
+        {error && (
+          <Text
+            text={t('Неверный логин или пароль')}
+            theme={TextTheme.ERROR}
+            className={cls.error}
+          />
+        )}
         <Input
           type="text"
           className={cls.input}

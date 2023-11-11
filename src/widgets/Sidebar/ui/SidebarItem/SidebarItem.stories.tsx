@@ -15,7 +15,9 @@ export default {
   },
 } as ComponentMeta<typeof SidebarItem>;
 
-const Template: ComponentStory<typeof SidebarItem> = (args) => <SidebarItem {...args} />;
+const Template: ComponentStory<typeof SidebarItem> = (args) => (
+  <SidebarItem {...args} />
+);
 
 export const Light = Template.bind({});
 Light.args = {
@@ -26,9 +28,7 @@ Light.args = {
   },
   collapsed: false,
 };
-Light.decorators = [
-  StoreDecorator({ user: { authData: {} } }),
-];
+Light.decorators = [StoreDecorator({ user: { authData: {} } })];
 
 export const LightCollapsed = Template.bind({});
 LightCollapsed.args = {
@@ -39,9 +39,7 @@ LightCollapsed.args = {
   },
   collapsed: true,
 };
-LightCollapsed.decorators = [
-  StoreDecorator({ user: { authData: {} } }),
-];
+LightCollapsed.decorators = [StoreDecorator({ user: { authData: {} } })];
 
 export const Dark = Template.bind({});
 Dark.args = {

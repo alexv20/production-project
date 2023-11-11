@@ -19,10 +19,8 @@ describe('fetchNextArticlesPage.test', () => {
 
     await thunk.callThunk();
 
-    expect(thunk.dispatch)
-      .toBeCalledTimes(4);
-    expect(fetchArticlesList)
-      .toBeCalledWith({});
+    expect(thunk.dispatch).toBeCalledTimes(4);
+    expect(fetchArticlesList).toBeCalledWith({});
   });
 
   test('not called without has more', async () => {

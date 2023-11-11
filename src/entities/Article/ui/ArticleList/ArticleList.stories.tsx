@@ -15,23 +15,24 @@ export default {
   },
 } as ComponentMeta<typeof ArticleList>;
 
-const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+const Template: ComponentStory<typeof ArticleList> = (args) => (
+  <ArticleList {...args} />
+);
 
 const article = {
   id: '1',
   user: {
     id: '1',
     username: 'Alex',
-    avatar: 'https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png',
+    avatar:
+      'https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png',
   },
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
-  type: [
-    'IT',
-  ],
+  type: ['IT'],
   blocks: [
     {
       id: '1',
@@ -111,21 +112,19 @@ isLoadingGrid.args = {
 export const Grid = Template.bind({});
 Grid.args = {
   isLoading: false,
-  articles: new Array(9)
-    .fill(0)
-    .map((item, index) => ({
-      ...article, id: String(index),
-    })),
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
   view: ArticleView.GRID,
 };
 
 export const List = Template.bind({});
 List.args = {
   isLoading: false,
-  articles: new Array(9)
-    .fill(0)
-    .map((item, index) => ({
-      ...article, id: String(index),
-    })),
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
   view: ArticleView.LIST,
 };

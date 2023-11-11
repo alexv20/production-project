@@ -10,13 +10,11 @@ import { Drawer } from '@/shared/ui/Drawer';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
-  className?: string
+  className?: string;
 }
 
 export const NotificationButton = memo((props: NotificationButtonProps) => {
-  const {
-    className,
-  } = props;
+  const { className } = props;
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 

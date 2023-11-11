@@ -11,7 +11,7 @@ interface RequireAuthProps {
 }
 
 export function RequireAuth({ children, roles }: RequireAuthProps) {
-  const isAuth = useSelector((getUserAuthData));
+  const isAuth = useSelector(getUserAuthData);
   const location = useLocation();
   const userRoles = useSelector(getUserRoles);
 
@@ -28,7 +28,9 @@ export function RequireAuth({ children, roles }: RequireAuthProps) {
   }
 
   if (!hasRequiredRoles) {
-    return <Navigate to={getRouteForbidden()} state={{ from: location }} replace />;
+    return (
+      <Navigate to={getRouteForbidden()} state={{ from: location }} replace />
+    );
   }
 
   return children;

@@ -14,11 +14,12 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-      }}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+        }}
       >
         <Story />
       </div>
@@ -26,13 +27,12 @@ export default {
   ],
 } as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+  <Dropdown {...args} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
-  items: [
-    { content: 'item 1' },
-    { content: 'item 3' },
-  ],
+  items: [{ content: 'item 1' }, { content: 'item 3' }],
   trigger: <Button>DROPDOWN</Button>,
 };

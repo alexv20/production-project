@@ -16,14 +16,17 @@ export default {
   },
 } as ComponentMeta<typeof ArticleDetails>;
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
+const Template: ComponentStory<typeof ArticleDetails> = (args) => (
+  <ArticleDetails {...args} />
+);
 
 const article: Article = {
   id: '1',
   user: {
     id: '1',
     username: 'Alex',
-    avatar: 'https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png',
+    avatar:
+      'https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png',
   },
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',
@@ -95,24 +98,30 @@ const article: Article = {
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({
-  articleDetails: {
-    data: article,
-  },
-})];
+Normal.decorators = [
+  StoreDecorator({
+    articleDetails: {
+      data: article,
+    },
+  }),
+];
 
 export const Loading = Template.bind({});
 Loading.args = {};
-Loading.decorators = [StoreDecorator({
-  articleDetails: {
-    isLoading: true,
-  },
-})];
+Loading.decorators = [
+  StoreDecorator({
+    articleDetails: {
+      isLoading: true,
+    },
+  }),
+];
 
 export const Error = Template.bind({});
 Error.args = {};
-Error.decorators = [StoreDecorator({
-  articleDetails: {
-    error: 'Error',
-  },
-})];
+Error.decorators = [
+  StoreDecorator({
+    articleDetails: {
+      error: 'Error',
+    },
+  }),
+];

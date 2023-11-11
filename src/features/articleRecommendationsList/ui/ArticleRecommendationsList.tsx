@@ -8,10 +8,12 @@ import { useArticleRecommendationsList } from '../api/articleRecommendationsApi'
 import cls from './ArticleRecommendationsList.module.scss';
 
 interface ArticleRecommendationsListProps {
-  className?: string
+  className?: string;
 }
 
-export const ArticleRecommendationsList = (props: ArticleRecommendationsListProps) => {
+export const ArticleRecommendationsList = (
+  props: ArticleRecommendationsListProps,
+) => {
   const { className } = props;
   const { t } = useTranslation();
   const { isLoading, data: articles, error } = useArticleRecommendationsList(3);
@@ -26,10 +28,7 @@ export const ArticleRecommendationsList = (props: ArticleRecommendationsListProp
       className={classNames('', {}, [className])}
       data-testid="ArticleRecommendationsList"
     >
-      <Text
-        size={TextSize.L}
-        title={t('Рекомендуем')}
-      />
+      <Text size={TextSize.L} title={t('Рекомендуем')} />
       <ArticleList
         articles={articles}
         isLoading={isLoading}

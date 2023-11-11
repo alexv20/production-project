@@ -1,8 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Profile } from '@/entities/Profile';
-import {
-  updateProfileData,
-} from '../services/updateProfileData/updateProfileData';
+import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData';
 import { ProfileSchema } from '../types/editableProfileCardSchema';
 
@@ -38,11 +36,14 @@ export const profileSlice = createSlice({
         state.error = undefined;
         state.isLoading = true;
       })
-      .addCase(fetchProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
-        state.isLoading = false;
-        state.data = action.payload;
-        state.form = action.payload;
-      })
+      .addCase(
+        fetchProfileData.fulfilled,
+        (state, action: PayloadAction<Profile>) => {
+          state.isLoading = false;
+          state.data = action.payload;
+          state.form = action.payload;
+        },
+      )
       .addCase(fetchProfileData.rejected, (state, action) => {
         state.error = action.payload;
         state.isLoading = false;
@@ -52,13 +53,16 @@ export const profileSlice = createSlice({
         state.validateErrors = undefined;
         state.isLoading = true;
       })
-      .addCase(updateProfileData.fulfilled, (state, action: PayloadAction<Profile>) => {
-        state.isLoading = false;
-        state.data = action.payload;
-        state.form = action.payload;
-        state.readonly = true;
-        state.validateErrors = undefined;
-      })
+      .addCase(
+        updateProfileData.fulfilled,
+        (state, action: PayloadAction<Profile>) => {
+          state.isLoading = false;
+          state.data = action.payload;
+          state.form = action.payload;
+          state.readonly = true;
+          state.validateErrors = undefined;
+        },
+      )
       .addCase(updateProfileData.rejected, (state, action) => {
         state.isLoading = false;
         state.validateErrors = action.payload;

@@ -14,7 +14,7 @@ import cls from './Navbar.module.scss';
 import { getRouteArticleCreate } from '@/shared/const/router';
 
 interface NavbarProps {
-    className?: string;
+  className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -33,7 +33,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(cls.Navbar, {}, [className])}>
-        <Text className={cls.name} title={t('Production')} theme={TextTheme.INVERTED} />
+        <Text
+          className={cls.name}
+          title={t('Production')}
+          theme={TextTheme.INVERTED}
+        />
         <AppLink to={getRouteArticleCreate()} theme={AppLinkTheme.SECONDARY}>
           {t('Создать статью')}
         </AppLink>
@@ -48,7 +52,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
   return (
     <header className={classNames(cls.Navbar, {}, [className])}>
-      <Text className={cls.name} title={t('Production')} theme={TextTheme.INVERTED} />
+      <Text
+        className={cls.name}
+        title={t('Production')}
+        theme={TextTheme.INVERTED}
+      />
       <div className={cls.links}>
         <Button
           theme={ButtonTheme.CLEAR_INVERTED}
@@ -59,10 +67,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         </Button>
       </div>
       {isAuthModal && (
-        <LoginModal
-          isOpen={isAuthModal}
-          onClose={onCloseModal}
-        />
+        <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
       )}
     </header>
   );
