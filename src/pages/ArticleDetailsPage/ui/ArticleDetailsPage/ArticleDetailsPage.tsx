@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleDetails } from '@/entities/Article';
 import {
@@ -17,7 +18,6 @@ import { articleDetailsPageReducer } from '../../model/slice';
 import { ArticleRating } from '@/features/articleRating';
 import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features';
 import { Card } from '@/shared/ui/Card';
-import { useTranslation } from 'react-i18next';
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -39,7 +39,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   const articleRatingCard = toggleFeatures({
     name: 'isArticleRatingEnabled',
+    // eslint-disable-next-line react/no-unstable-nested-components
     on: () => <ArticleRating articleId={id} />,
+    // eslint-disable-next-line react/no-unstable-nested-components
     off: () => <Card>{t('Оценка статей скоро появится!')}</Card>,
   });
 
