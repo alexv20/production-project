@@ -9,6 +9,7 @@ export {
 } from './model/selectors/roleSelectors';
 export { UserRole } from './model/consts/consts';
 export { saveJsonSettings } from './model/services/saveJsonSettings';
+export { initAuthData } from './model/services/initAuthData';
 export {
   useJsonSettings,
   getJsonSettings,

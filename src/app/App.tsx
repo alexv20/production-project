@@ -1,21 +1,27 @@
 import React, { Suspense, useEffect } from 'react';
 import './styles/index.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTheme } from '@/shared/lib/hooks/useTheme';
 import { AppRouter } from '../app/providers/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { getUserInited, userActions } from '@/entities/User';
+import { getUserInited, initAuthData } from '@/entities/User';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { PageLoader } from '@/widgets/PageLoader';
 
 function App() {
   const { theme } = useTheme();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const inited = useSelector(getUserInited);
 
   useEffect(() => {
-    dispatch(userActions.initAuthData());
+    dispatch(initAuthData());
   }, [dispatch]);
+
+  if (!inited) {
+    return <PageLoader />;
+  }
 
   return (
     <div className={classNames('app', {}, [theme])}>
