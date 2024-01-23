@@ -43,6 +43,8 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
           className={cls.viewSelector}
         >
           <Icon
+            width={24}
+            height={24}
             Svg={viewType.icon}
             className={classNames('', {
               [cls.selected]: viewType.view !== view,
