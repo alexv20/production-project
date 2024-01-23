@@ -1,10 +1,10 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Icon } from 'src/shared/ui/deprecated/Icon';
+import { Button, ButtonTheme } from 'src/shared/ui/deprecated/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import ListIcon from '@/shared/assets/icons/articles/details/list.svg';
 import GridIcon from '@/shared/assets/icons/articles/details/grid.svg';
-import { Icon } from '@/shared/ui/Icon';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '@/entities/Article';
 

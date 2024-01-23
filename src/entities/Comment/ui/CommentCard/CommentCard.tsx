@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Text } from '@/shared/ui/Text';
+import { Avatar } from 'src/shared/ui/deprecated/Avatar';
+import { Text } from 'src/shared/ui/deprecated/Text';
+import { Skeleton } from 'src/shared/ui/deprecated/Skeleton';
+import { AppLink } from 'src/shared/ui/deprecated/AppLink';
+import { VStack } from 'src/shared/ui/deprecated/Stack';
 import DefaultAvatar from '@/shared/assets/default-user-avatar.png';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { AppLink } from '@/shared/ui/AppLink';
-import { VStack } from '@/shared/ui/Stack';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Comment } from '../../model/types/comment';
 import cls from './CommentCard.module.scss';
 import { getRouteProfile } from '@/shared/const/router';
@@ -15,6 +15,7 @@ interface CommentCardProps {
   comment?: Comment;
   isLoading?: boolean;
 }
+
 export const CommentCard = memo((props: CommentCardProps) => {
   const { className, comment, isLoading } = props;
 

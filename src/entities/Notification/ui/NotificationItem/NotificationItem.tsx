@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Card, CardTheme } from 'src/shared/ui/deprecated/Card';
+import { Text } from 'src/shared/ui/deprecated/Text';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Card, CardTheme } from '@/shared/ui/Card';
-import { Text } from '@/shared/ui/Text';
 import cls from './NotificationItem.module.scss';
 import { Notification } from '../../model/types/notification';
 

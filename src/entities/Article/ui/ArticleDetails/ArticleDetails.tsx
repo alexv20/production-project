@@ -1,19 +1,19 @@
 import React, { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { Text, TextAlign, TextSize } from 'src/shared/ui/deprecated/Text';
+import { Skeleton } from 'src/shared/ui/deprecated/Skeleton';
+import { Avatar } from 'src/shared/ui/deprecated/Avatar';
+import { Icon } from 'src/shared/ui/deprecated/Icon';
+import { HStack, VStack } from 'src/shared/ui/deprecated/Stack';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar';
 import ViewIcon from '@/shared/assets/icons/articles/details/views.svg';
 import DateIcon from '@/shared/assets/icons/articles/details/date.svg';
-import { Icon } from '@/shared/ui/Icon';
-import { HStack, VStack } from '@/shared/ui/Stack';
 import { ArticleBlockType } from '../../model/consts/consts';
 import { ArticleBlock } from '../../model/types/article';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
