@@ -1,7 +1,6 @@
 import React, { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '../Button/Button';
+import { Button, ButtonTheme } from '../../deprecated/Button/Button';
 import CopyIcon from '@/shared/assets/icons/articles/details/copy.svg';
 import cls from './Code.module.scss';
 
@@ -15,8 +14,6 @@ interface CodeProps {
  * @deprecated
  */
 export const Code = memo(({ className, text }: CodeProps) => {
-  const { t } = useTranslation();
-
   const onCopy = useCallback(() => {
     navigator.clipboard.writeText(text);
   }, [text]);

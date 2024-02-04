@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { Text } from 'src/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/deprecated/Text';
 import { ArticleList } from '@/entities/Article';
 import {
   getArticlesPageError,

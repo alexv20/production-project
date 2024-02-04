@@ -1,11 +1,11 @@
 import React, { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Text, TextAlign, TextSize } from 'src/shared/ui/deprecated/Text';
-import { Skeleton } from 'src/shared/ui/deprecated/Skeleton';
-import { Avatar } from 'src/shared/ui/deprecated/Avatar';
-import { Icon } from 'src/shared/ui/deprecated/Icon';
-import { HStack, VStack } from 'src/shared/ui/deprecated/Stack';
+import { Text, TextAlign, TextSize } from '@/shared/ui/deprecated/Text';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,

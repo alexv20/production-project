@@ -1,12 +1,12 @@
 import React, { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Text } from 'src/shared/ui/deprecated/Text';
-import { Icon } from 'src/shared/ui/deprecated/Icon';
-import { Card } from 'src/shared/ui/deprecated/Card';
-import { Avatar } from 'src/shared/ui/deprecated/Avatar';
-import { Button, ButtonTheme } from 'src/shared/ui/deprecated/Button';
-import { AppLink } from 'src/shared/ui/deprecated/AppLink';
-import { Skeleton } from 'src/shared/ui/deprecated/Skeleton';
+import { Text } from '@/shared/ui/deprecated/Text';
+import { Icon } from '@/shared/ui/redesigned/Icon';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { AppLink } from '@/shared/ui/redesigned/AppLink';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import EyeIcon from '@/shared/assets/icons/articles/details/views.svg';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
@@ -14,7 +14,7 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { getRouteArticleDetails } from '@/shared/const/router';
-import { AppImage } from '@/shared/ui/deprecated/AppImage/AppImage';
+import { AppImage } from '@/shared/ui/deprecated/AppImage';
 
 interface ArticleListItemProps {
   className?: string;

@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import React, { memo, useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Button, ButtonTheme } from 'src/shared/ui/deprecated/Button';
-import { Text, TextTheme } from 'src/shared/ui/deprecated/Text';
-import { AppLink, AppLinkTheme } from 'src/shared/ui/deprecated/AppLink';
-import { HStack } from 'src/shared/ui/deprecated/Stack';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { AppLink } from '@/shared/ui/redesigned/AppLink';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
@@ -50,10 +50,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
               title={t('Production')}
               theme={TextTheme.INVERTED}
             />
-            <AppLink
-              to={getRouteArticleCreate()}
-              theme={AppLinkTheme.SECONDARY}
-            >
+            <AppLink to={getRouteArticleCreate()} variant="secondary">
               {t('Создать статью')}
             </AppLink>
             <HStack gap="16" align="center" className={cls.actions}>

@@ -1,4 +1,4 @@
-import { Loader } from 'src/shared/ui/deprecated/Loader';
+import { Loader } from '@/shared/ui/deprecated/Loader';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './PageLoader.module.scss';
 

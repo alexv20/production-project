@@ -1,10 +1,10 @@
 import React, { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Button, ButtonTheme } from 'src/shared/ui/deprecated/Button';
-import { Input } from 'src/shared/ui/deprecated/Input';
-import { Text, TextTheme } from 'src/shared/ui/deprecated/Text';
-import { VStack } from 'src/shared/ui/deprecated/Stack';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
+import { VStack } from '@/shared/ui/deprecated/Stack';
 import {
   DynamicModuleLoader,
   ReducersList,

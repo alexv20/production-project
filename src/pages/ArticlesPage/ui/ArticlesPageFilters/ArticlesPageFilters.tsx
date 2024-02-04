@@ -1,9 +1,9 @@
 import React, { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Card } from 'src/shared/ui/deprecated/Card';
-import { Input } from 'src/shared/ui/deprecated/Input';
-import { TabItem } from 'src/shared/ui/deprecated/Tabs';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { TabItem } from '@/shared/ui/deprecated/Tabs';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
