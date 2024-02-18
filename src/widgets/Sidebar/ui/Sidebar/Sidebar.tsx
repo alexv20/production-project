@@ -1,5 +1,6 @@
 import { memo, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { LangSwitcher } from '@/features/LangSwitcher';
@@ -8,7 +9,6 @@ import {
   ButtonSize,
   ButtonTheme,
 } from '@/shared/ui/deprecated/Button/';
-import { VStack } from '@/shared/ui/deprecated/Stack';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems/getSidebarItems';
