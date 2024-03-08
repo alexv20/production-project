@@ -15,6 +15,9 @@ import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPag
 import { articlesPageReducer } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { ArticlePageGreeting } from '@/features/articlePageGreeting';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
+import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
 
 interface ArticlesPageProps {
   className?: string;
@@ -37,17 +40,45 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     dispatch(fetchNextArticlesPage());
   }, [dispatch]);
 
+  const content = (
+    <ToggleFeatures
+      feature="isAppRedesigned"
+      on={
+        <StickyContentLayout
+          left={<ViewSelectorContainer />}
+          right={<div />}
+          content={
+            <Page
+              data-testid="ArticlesPage"
+              onScrollEnd={onLoadNextPage}
+              className={classNames(cls.ArticlesPageRedesigned, {}, [
+                className,
+              ])}
+            >
+              <ArticlesPageFilters />
+              <ArticleInfiniteList />
+              <ArticlePageGreeting />
+            </Page>
+          }
+        />
+      }
+      off={
+        <Page
+          data-testid="ArticlesPage"
+          onScrollEnd={onLoadNextPage}
+          className={classNames(cls.ArticlesPage, {}, [className])}
+        >
+          <ArticlesPageFilters />
+          <ArticleInfiniteList />
+          <ArticlePageGreeting />
+        </Page>
+      }
+    />
+  );
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
-      <Page
-        data-testid="ArticlesPage"
-        onScrollEnd={onLoadNextPage}
-        className={classNames(cls.ArticlesPage, {}, [className])}
-      >
-        <ArticlesPageFilters />
-        <ArticleInfiniteList />
-        <ArticlePageGreeting />
-      </Page>
+      {content}
     </DynamicModuleLoader>
   );
 };

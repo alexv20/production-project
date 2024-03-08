@@ -5,7 +5,7 @@ import { Card } from '@/shared/ui/deprecated/Card';
 import { Input } from '@/shared/ui/deprecated/Input';
 import { TabItem } from '@/shared/ui/deprecated/Tabs';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
+import { ArticleSortField, ArticleType } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { SortOrder } from '@/shared/types/sort';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce';
@@ -16,12 +16,10 @@ import {
   getArticlesPageSearch,
   getArticlesPageSort,
   getArticlesPageType,
-  getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { articlesPageActions } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPageFilters.module.scss';
 import { ArticleSortSelector } from '@/features/ArticleSortSelector';
-import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 
 interface ArticlesPageFiltersProps {
@@ -32,18 +30,10 @@ export const ArticlesPageFilters = memo(
   ({ className }: ArticlesPageFiltersProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
-    const view = useSelector(getArticlesPageView);
     const sort = useSelector(getArticlesPageSort);
     const order = useSelector(getArticlesPageOrder);
     const search = useSelector(getArticlesPageSearch);
     const type = useSelector(getArticlesPageType);
-
-    const onChangeView = useCallback(
-      (view: ArticleView) => {
-        dispatch(articlesPageActions.setView(view));
-      },
-      [dispatch],
-    );
 
     const fetchData = useCallback(() => {
       dispatch(fetchArticlesList({ replace: true }));
@@ -95,11 +85,6 @@ export const ArticlesPageFilters = memo(
             order={order}
             onChangeSort={onChangeSort}
             onChangeOrder={onChangeOrder}
-          />
-          <ArticleViewSelector
-            view={view}
-            onViewClick={onChangeView}
-            className={cls.viewSelector}
           />
         </div>
         <Card className={cls.search}>
