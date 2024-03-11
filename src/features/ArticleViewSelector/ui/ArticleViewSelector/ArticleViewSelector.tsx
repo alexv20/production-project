@@ -52,11 +52,11 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     <ToggleFeatures
       feature="isAppRedesigned"
       on={
-        <Card>
-          <div
+        <Card
             className={classNames(cls.ArticleViewSelectorRedesigned, {}, [
-              className,
+            className,
             ])}
+            border='round'
           >
             <HStack gap="8">
               {viewTypes.map((viewType) => (
@@ -70,7 +70,6 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
                 />
               ))}
             </HStack>
-          </div>
         </Card>
       }
       off={
