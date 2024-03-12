@@ -7,6 +7,7 @@ import { DropdownDirection } from '@/shared/types/ui';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../styles/consts';
 import popupCls from '../styles/popup.module.scss';
+import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 
 export interface ListBoxItem<T extends string> {
   value: T;
@@ -39,7 +40,10 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
 
   const optionsClasses = [mapDirectionClass[direction]];
 
-  const selectedItem = useMemo(() => items.find(item => item.value === value), [items, value])
+  const selectedItem = useMemo(
+    () => items.find((item) => item.value === value),
+    [items, value],
+  );
 
   return (
     <HStack align="center" gap="4">
@@ -52,7 +56,13 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
         disabled={readonly}
       >
         <HListBox.Button className={popupCls.trigger}>
-          <Button variant='filled' disabled={readonly}>{selectedItem?.content ?? defaultValue}</Button>
+          <Button
+            variant="filled"
+            disabled={readonly}
+            addonRight={<ArrowIcon />}
+          >
+            {selectedItem?.content ?? defaultValue}
+          </Button>
         </HListBox.Button>
         <HListBox.Options
           className={classNames(cls.options, {}, optionsClasses)}
@@ -69,7 +79,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
                   className={classNames(cls.item, {
                     [popupCls.active]: active,
                     [popupCls.disabled]: item.disabled,
-                    [popupCls.disabled]: selected
+                    [popupCls.disabled]: selected,
                   })}
                 >
                   {selected}
