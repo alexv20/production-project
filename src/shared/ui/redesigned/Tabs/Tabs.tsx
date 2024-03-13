@@ -31,7 +31,6 @@ export const Tabs = memo((props: TabsProps) => {
     <Flex
       direction={direction}
       gap="8"
-      align="start"
       className={classNames(cls.Tabs, {}, [className])}
     >
       {tabs.map((tab) => {
