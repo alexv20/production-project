@@ -4,6 +4,11 @@
   justify-content: center;
 }
 
+.appLogo {
+  position: relative;
+  z-index: 100;
+}
+
 .gradient {
   position: absolute;
   width: 200px;
