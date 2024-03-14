@@ -1,16 +1,21 @@
-.ArticleList {
-  padding-top: 15px;
-}
-
 .LIST {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
+    .card {
+        margin-bottom: 30px;
+    }
 }
 
 .GRID {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 230px);
-  gap: 30px;
-  justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .card {
+        display: inline-flex;
+        height: 300px;
+    }
+
+    .row {
+        display: flex;
+        gap: 30px;
+    }
 }

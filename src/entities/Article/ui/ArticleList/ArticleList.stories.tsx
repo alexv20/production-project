@@ -1,17 +1,15 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { ArticleView } from '../../model/consts/consts';
-import { Article } from '../../model/types/article';
 import { ArticleList } from './ArticleList';
+import { Article } from '../../model/types/article';
 
 export default {
   title: 'entities/Article/ArticleList',
   component: ArticleList,
   argTypes: {
     backgroundColor: { control: 'color' },
-  },
-  args: {
-    to: '/',
   },
 } as ComponentMeta<typeof ArticleList>;
 
@@ -21,18 +19,18 @@ const Template: ComponentStory<typeof ArticleList> = (args) => (
 
 const article = {
   id: '1',
-  user: {
-    id: '1',
-    username: 'Alex',
-    avatar:
-      'https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png',
-  },
-  title: 'Javascript news',
+  title: 'Javascript news asfasjf asfjkask f',
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
-  type: ['IT'],
+  user: {
+    id: '1',
+    username: 'Ulbi tv',
+    avatar:
+      'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
+  },
+  type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
   blocks: [
     {
       id: '1',
@@ -95,36 +93,36 @@ const article = {
   ],
 } as Article;
 
-export const isLoadingList = Template.bind({});
-isLoadingList.args = {
-  isLoading: true,
+export const LoadingBig = Template.bind({});
+LoadingBig.args = {
   articles: [],
+  isLoading: true,
   view: ArticleView.LIST,
 };
 
-export const isLoadingGrid = Template.bind({});
-isLoadingGrid.args = {
-  isLoading: true,
+export const LoadingSmall = Template.bind({});
+LoadingSmall.args = {
   articles: [],
+  isLoading: true,
   view: ArticleView.GRID,
 };
 
-export const Grid = Template.bind({});
-Grid.args = {
-  isLoading: false,
+export const ListSmall = Template.bind({});
+ListSmall.args = {
   articles: new Array(9).fill(0).map((item, index) => ({
     ...article,
     id: String(index),
   })),
+  isLoading: false,
   view: ArticleView.GRID,
 };
 
-export const List = Template.bind({});
-List.args = {
-  isLoading: false,
+export const ListBig = Template.bind({});
+ListBig.args = {
   articles: new Array(9).fill(0).map((item, index) => ({
     ...article,
     id: String(index),
   })),
+  isLoading: false,
   view: ArticleView.LIST,
 };

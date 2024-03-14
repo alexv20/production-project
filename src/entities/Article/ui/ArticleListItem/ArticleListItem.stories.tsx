@@ -1,17 +1,15 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+
 import { ArticleView } from '../../model/consts/consts';
-import { Article } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
+import { Article } from '../../model/types/article';
 
 export default {
   title: 'entities/Article/ArticleListItem',
   component: ArticleListItem,
   argTypes: {
     backgroundColor: { control: 'color' },
-  },
-  args: {
-    to: '/',
   },
 } as ComponentMeta<typeof ArticleListItem>;
 
@@ -21,18 +19,18 @@ const Template: ComponentStory<typeof ArticleListItem> = (args) => (
 
 const article = {
   id: '1',
-  user: {
-    id: '1',
-    username: 'Alex',
-    avatar:
-      'https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png',
-  },
-  title: 'Javascript news',
+  title: 'Javascript news asfasjf asfjkask f',
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
-  type: ['IT'],
+  user: {
+    id: '1',
+    username: 'Ulbi tv',
+    avatar:
+      'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
+  },
+  type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
   blocks: [
     {
       id: '1',
@@ -95,14 +93,14 @@ const article = {
   ],
 } as Article;
 
-export const Grid = Template.bind({});
-Grid.args = {
-  view: ArticleView.GRID,
+export const Big = Template.bind({});
+Big.args = {
+  view: ArticleView.LIST,
   article,
 };
 
-export const List = Template.bind({});
-List.args = {
-  view: ArticleView.LIST,
+export const Small = Template.bind({});
+Small.args = {
+  view: ArticleView.GRID,
   article,
 };

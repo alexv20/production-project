@@ -69,3 +69,9 @@
     font: var(--font-m-redesigned);
   }
 }
+
+.bold {
+  .title, .text {
+    font-weight: 700;
+  }
+}
