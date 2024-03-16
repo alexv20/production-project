@@ -6,11 +6,10 @@
 .header {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+}
 
-  &__avatar {
-    margin-right: 10px;
-  }
+.username {
+  margin-left: 10px;
 }
 
 .loading {
