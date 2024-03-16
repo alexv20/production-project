@@ -1,5 +1,6 @@
 import React, { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
+import { Drawer as DrawerDeprecated } from '@/shared/ui/redesigned/Drawer';
 import {
   Button as ButtonDeprecated,
   ButtonTheme,
@@ -12,7 +13,6 @@ import cls from './NotificationButton.module.scss';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
 import { Popover as PopoverDeprecated } from '@/shared/ui/deprecated/Popups';
-import { Drawer as DrawerDeprecated } from '@/shared/ui/deprecated/Drawer';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import { Popover } from '@/shared/ui/redesigned/Popups';
 
