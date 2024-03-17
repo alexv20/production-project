@@ -717,7 +717,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
@@ -779,7 +779,7 @@
       "firstname": "alex",
       "lastname": "vasiliev",
       "age": 25,
-      "currency": "EUR",
+      "currency": "RUB",
       "country": "Russia",
       "city": "Kazan",
       "username": "admin",
