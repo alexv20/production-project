@@ -11,7 +11,7 @@
     "start:server": "node ./json-server/index.js",
     "build:prod": "webpack  --env mode=production apiUrl=http://188.68.223.117",
     "build:dev": "webpack  --env mode=development",
-    "lint:ts": "eslint \"**/*.{ts,tsx}\" --quiet",
+    "lint:ts": "eslint \"./src/**/*.{ts,tsx}\" --quiet",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",

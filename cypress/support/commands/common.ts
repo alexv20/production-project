@@ -1,4 +1,4 @@
-import { USER_LOCALSTORAGE_KEY } from '../../../src/shared/const/localstorage';
+import { USER_LOCALSTORAGE_KEY } from '../../../src/shared/const/localStorage';
 import { User } from '../../../src/entities/User';
 import { selectByTestId } from '../../helpers/selectByTestId';
 
@@ -26,6 +26,7 @@ declare global {
   namespace Cypress {
     interface Chainable {
       login(email?: string, password?: string): Chainable<User>;
+
       getByTestId(testId: string): Chainable<JQuery<HTMLElement>>;
     }
   }
