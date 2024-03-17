@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Text } from '../Text/Text';
-import { Card, CardTheme } from './Card';
+import { Card } from './Card';
 
 export default {
   title: 'shared/Card',
@@ -24,5 +24,5 @@ Normal.args = {
 export const Outlined = Template.bind({});
 Outlined.args = {
   children: <Text title="title" text="text" />,
-  variant: CardTheme.OUTLINED,
+  variant: 'normal',
 };

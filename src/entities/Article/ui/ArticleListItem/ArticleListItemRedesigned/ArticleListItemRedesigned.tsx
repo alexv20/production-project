@@ -28,7 +28,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     </>
   );
   const views = (
-    <HStack gap="8">
+    <HStack gap="4" align="center">
       <Icon Svg={EyeIcon} />
       <Text text={String(article.views)} className={cls.views} />
     </HStack>
@@ -51,7 +51,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
             {userInfo}
             <Text text={article.createdAt} />
           </HStack>
-          <Text title={article.title} bold />
+          <Text title={article.title} bold size="l" />
           <Text title={article.subtitle} size="s" />
           <AppImage
             fallback={<Skeleton width="100%" height={250} />}
@@ -91,7 +91,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
           className={cls.img}
         />
         <VStack className={cls.info} gap="4">
-          <Text title={article.title} className={cls.title} />
+          <Text title={article.title} className={cls.title} bold size="m" />
           <VStack gap="4" className={cls.footer} max>
             <HStack justify="between" max>
               <Text text={article.createdAt} className={cls.date} />
