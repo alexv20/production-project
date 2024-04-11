@@ -20,6 +20,10 @@ export const ArticlePageGreeting = memo(() => {
     }
   }, [dispatch, isArticlesPageWasOpened]);
 
+  if (__PROJECT__ === 'storybook') {
+    return null;
+  }
+
   const onClose = () => setIsOpen(false);
 
   const text = (

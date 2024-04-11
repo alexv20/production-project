@@ -2,7 +2,7 @@ import React, { Fragment, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import CheckIcon from '@/shared/assets/icons/check.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button } from '../../../../redesigned/Button/Button';
+import { Button } from '../../../../deprecated/Button/Button';
 import { HStack } from '../../../../redesigned/Stack';
 import { DropdownDirection } from '@/shared/types/ui';
 import cls from './ListBox.module.scss';

@@ -16,7 +16,7 @@ import {
 } from '@/shared/ui/deprecated/Text';
 
 export const ProfileCardDeprecatedError = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('profile');
 
   return (
     <HStack
@@ -37,6 +37,7 @@ export const ProfileCardDeprecatedError = () => {
 export const ProfileCardDeprecatedLoader = () => (
   <HStack
     justify="center"
+    align="center"
     max
     className={classNames(cls.ProfileCard, { [cls.loading]: true })}
   >
@@ -77,7 +78,7 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
       )}
       <InputDeprecated
         value={data?.firstname}
-        placeholder={t('Ваше имя')}
+        placeholder={t('Имя')}
         className={cls.input}
         onChange={onChangeFirstname}
         readonly={readonly}
@@ -85,7 +86,7 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
       />
       <InputDeprecated
         value={data?.lastname}
-        placeholder={t('Ваша фамилия')}
+        placeholder={t('Фамилия')}
         className={cls.input}
         onChange={onChangeLastname}
         readonly={readonly}
@@ -93,7 +94,7 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
       />
       <InputDeprecated
         value={data?.age}
-        placeholder={t('Ваш возраст')}
+        placeholder={t('Возраст')}
         className={cls.input}
         onChange={onChangeAge}
         readonly={readonly}
@@ -107,14 +108,14 @@ export const ProfileCardDeprecated = memo((props: ProfileCardProps) => {
       />
       <InputDeprecated
         value={data?.username}
-        placeholder={t('Введите имя пользователя')}
+        placeholder={t('Имя пользователя')}
         className={cls.input}
         onChange={onChangeUsername}
         readonly={readonly}
       />
       <InputDeprecated
         value={data?.avatar}
-        placeholder={t('Введите ссылку на аватар')}
+        placeholder={t('Cсылка на аватар')}
         className={cls.input}
         onChange={onChangeAvatar}
         readonly={readonly}

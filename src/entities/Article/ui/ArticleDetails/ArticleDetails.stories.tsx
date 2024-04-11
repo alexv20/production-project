@@ -5,6 +5,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { ArticleType, ArticleBlockType } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
+import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlags/FeatureFlagsDecorator';
 
 export default {
   title: 'entities/Article/ArticleDetails',
@@ -85,5 +86,18 @@ Error.decorators = [
     articleDetails: {
       error: 'error',
     },
+  }),
+];
+
+export const NormalRedesigned = Template.bind({});
+NormalRedesigned.args = {};
+NormalRedesigned.decorators = [
+  StoreDecorator({
+    articleDetails: {
+      data: article,
+    },
+  }),
+  FeatureFlagsDecorator({
+    isAppRedesigned: true,
   }),
 ];

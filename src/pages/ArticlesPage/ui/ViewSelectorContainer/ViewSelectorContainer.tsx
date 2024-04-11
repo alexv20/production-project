@@ -13,7 +13,7 @@ export const ViewSelectorContainer = memo(
     const { className } = props;
     const { t } = useTranslation();
 
-    const {view, onChangeView} = useArticleFilters()
+    const { view, onChangeView } = useArticleFilters();
 
     return (
       <ArticleViewSelector

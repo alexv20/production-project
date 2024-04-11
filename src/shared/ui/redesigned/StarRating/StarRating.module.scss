@@ -1,10 +1,15 @@
 .StarRating {
+  display: flex;
+  .normal {
+    fill: none;
+  }
   .hovered {
     fill: var(--primary-color);
   }
 }
 
 .StarRatingRedesigned {
+  display: flex;
   .normal {
     fill: none;
   }

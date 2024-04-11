@@ -2,9 +2,9 @@
 
 ```
 npm install - устанавливаем зависимости
-npm run start:dev или npm run start:dev:vite - запуск сервера + frontend проекта в dev режиме
+npm run start:dev - запуск сервера + frontend проекта в dev режиме
+npm run start:vite:dev - запуск сервера + frontend проекта в dev режиме (Vite)
 ```
-
 ---
 
 ## Скрипты
@@ -31,7 +31,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run storybook:build` - Сборка storybook билда
 - `npm run prepare` - прекоммит хуки
 - `npm run generate:slice` - Скрипт для генерации FSD слайсов
-
+- `npm run remove-feature` - Скрипт для удаления старых фич из проекта
 ---
 
 ## Архитектура проекта
@@ -61,8 +61,6 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 2. Тесты на компоненты с React testing library -`npm run test:unit`
 3. Скриншотное тестирование с loki `npm run test:ui`
 4. e2e тестирование с Cypress `npm run test:e2e`
-
-Подробнее о тестах - [документация тестирование](/docs/tests.md)
 
 ---
 
@@ -193,29 +191,3 @@ off: функция, которая отработает после Выключ
 1. Название удаляемого фича-флага
 2. Состояние (on\off)
 
-----
-
-## Сущности (entities)
-
-- [Article](/src/entities/Article)
-- [Comment](/src/entities/Comment)
-- [Country](/src/entities/Country)
-- [Currency](/src/entities/Currency)
-- [Notification](/src/entities/Notification)
-- [Profile](/src/entities/Profile)
-- [Rating](/src/entities/Rating)
-- [User](/src/entities/User)
-
-## Фичи (features)
-
-- [addCommentForm](/src/features/addCommentForm)
-- [articleEditForm](/src/features/articleEditForm)
-- [articleRating](/src/features/articleRating)
-- [articleRecommendationsList](/src/features/articleRecommendationsList)
-- [AuthByUsername](/src/features/AuthByUsername)
-- [avatarDropdown](/src/features/avatarDropdown)
-- [editableProfileCard](/src/features/editableProfileCard)
-- [LangSwitcher](/src/features/LangSwitcher)
-- [notificationButton](/src/features/notificationButton)
-- [ThemeSwitcher](/src/features/ThemeSwitcher)
-- [ScrollSave](/src/features/ScrollSave)

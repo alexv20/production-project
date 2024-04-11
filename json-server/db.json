@@ -604,43 +604,43 @@
     {
       "articleId": "1",
       "userId": "1",
-      "text": "las com",
+      "text": "last comment",
       "id": "vcOGOJg"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "user commn",
+      "text": "user comment",
       "id": "ZUndH7n"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "user commn",
+      "text": "user comment",
       "id": "cC7p6IG"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "fds12121321",
+      "text": "texttext",
       "id": "0Ehgomi"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "h1",
+      "text": "1233321",
       "id": "3eQ-pMA"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "hedf",
+      "text": "hello",
       "id": "sOWo4rq"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "fdsfsdfsd",
+      "text": "hello",
       "id": "3B_yInB"
     },
     {
@@ -670,19 +670,19 @@
     {
       "articleId": "7",
       "userId": "1",
-      "text": "dsa",
+      "text": "qwe",
       "id": "MrcIw5r"
     },
     {
       "articleId": "7",
       "userId": "1",
-      "text": "cad",
+      "text": "qwer",
       "id": "iPEXqtw"
     },
     {
       "articleId": "3",
       "userId": "1",
-      "text": "fdsfds",
+      "text": "qwert",
       "id": "uhZpsMh"
     },
     {
@@ -702,6 +702,24 @@
       "userId": "1",
       "text": "qqwdfdsa",
       "id": "cxmoagr"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "norm",
+      "id": "u7P213-"
+    },
+    {
+      "articleId": "8",
+      "userId": "1",
+      "text": "qq",
+      "id": "A4CstFW"
+    },
+    {
+      "articleId": "11",
+      "userId": "1",
+      "text": "good!",
+      "id": "gaptjGr"
     }
   ],
   "users": [
@@ -751,12 +769,15 @@
         "MANAGER"
       ],
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageWasOpened": true
       },
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg",
+      "features": {
+        "isAppRedesigned": true
+      }
     },
     {
       "id": "4",
@@ -850,6 +871,30 @@
       "rate": 5,
       "feedback": "fds",
       "id": "GkYyMzg"
+    },
+    {
+      "userId": "1",
+      "articleId": "13",
+      "rate": 4,
+      "id": "-8dyPEq"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 3,
+      "id": "lcBO6zL"
+    },
+    {
+      "userId": "3",
+      "articleId": "2",
+      "rate": 3,
+      "id": "2fL5RJJ"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 3,
+      "id": "bsz3igO"
     }
   ],
   "profile-ratings": [

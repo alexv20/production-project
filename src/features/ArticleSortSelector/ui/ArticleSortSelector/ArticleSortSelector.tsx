@@ -8,7 +8,7 @@ import { ArticleSortField } from '@/entities/Article';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { ListBox } from '@/shared/ui/redesigned/Popups';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import {Text} from '@/shared/ui/redesigned/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface ArticleSortSelectorProps {
   className?: string;
@@ -59,9 +59,13 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     <ToggleFeatures
       feature="isAppRedesigned"
       on={
-        <div className={classNames(cls.ArticleSortSelectorRedesigned, {}, [className])}>
-          <VStack gap='8'>
-            <Text text={t('Сортировать по:')}/>
+        <div
+          className={classNames(cls.ArticleSortSelectorRedesigned, {}, [
+            className,
+          ])}
+        >
+          <VStack gap="8">
+            <Text text={t('Сортировать по')} />
             <ListBox
               value={sort}
               onChange={onChangeSort}

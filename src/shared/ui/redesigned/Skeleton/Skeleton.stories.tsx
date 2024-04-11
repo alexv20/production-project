@@ -4,13 +4,15 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Skeleton } from './Skeleton';
 import { Theme } from '@/shared/const/theme';
+import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlags/FeatureFlagsDecorator';
 
 export default {
-  title: 'shared/Skeleton',
+  title: 'shared/redesigned/Skeleton',
   component: Skeleton,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [FeatureFlagsDecorator({ isAppRedesigned: true })],
 } as ComponentMeta<typeof Skeleton>;
 
 const Template: ComponentStory<typeof Skeleton> = (args) => (

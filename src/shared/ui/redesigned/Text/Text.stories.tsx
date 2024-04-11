@@ -2,11 +2,11 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Text, TextSize, TextTheme } from './Text';
+import { Text } from './Text';
 import { Theme } from '../../../const/theme';
 
 export default {
-  title: 'shared/Text',
+  title: 'shared/redesigned/Text',
   component: Text,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -25,7 +25,7 @@ export const Error = Template.bind({});
 Error.args = {
   title: 'Title lorem ipsun',
   text: 'Text Text Text Text Text Text',
-  theme: TextTheme.ERROR,
+  variant: 'error',
 };
 
 export const onlyTitle = Template.bind({});
@@ -61,5 +61,5 @@ export const Size = Template.bind({});
 Size.args = {
   title: 'Title lorem ipsun',
   text: 'Text Text Text Text Text Text',
-  size: TextSize.L,
+  size: 'l',
 };

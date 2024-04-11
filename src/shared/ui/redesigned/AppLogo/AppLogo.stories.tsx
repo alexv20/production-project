@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { AppLogo } from './AppLogo';
 
 export default {
-  title: 'slice/AppLogo',
+  title: 'shared/redesigned/AppLogo',
   component: AppLogo,
   argTypes: {
     backgroundColor: { control: 'color' },

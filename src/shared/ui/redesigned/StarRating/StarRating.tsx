@@ -33,6 +33,7 @@ export const StarRating = memo((props: StarRatingProps) => {
   };
 
   const onClick = (starsCount: number) => () => {
+    console.log('click');
     if (!isSelected) {
       onSelect?.(starsCount);
       setCurrentStarsCount(starsCount);
@@ -69,9 +70,10 @@ export const StarRating = memo((props: StarRatingProps) => {
         };
         return (
           <ToggleFeatures
+            key={starNumber}
             feature="isAppRedesigned"
             on={<Icon clickable={!isSelected} {...commonProps} />}
-            off={<IconDeprecated {...commonProps} />}
+            off={<IconDeprecated clickable={!isSelected} {...commonProps} />}
           />
         );
       })}

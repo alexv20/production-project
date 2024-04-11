@@ -58,6 +58,7 @@ export const Button = forwardRef(
           cls[color],
         ])}
         disabled={disabled}
+        ref={ref}
         {...otherProps}
       >
         <div className={cls.addonLeft}>{addonLeft}</div>

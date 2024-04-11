@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import LoginForm from './LoginForm';
+import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlags/FeatureFlagsDecorator';
 
 export default {
   title: 'features/LoginForm',
@@ -21,6 +22,15 @@ Primary.decorators = [
   StoreDecorator({
     loginForm: { username: '123', password: 'asd' },
   }),
+];
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [
+  StoreDecorator({
+    loginForm: { username: '123', password: 'asd' },
+  }),
+  FeatureFlagsDecorator({ isAppRedesigned: true }),
 ];
 
 export const withError = Template.bind({});

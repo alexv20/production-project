@@ -7,9 +7,7 @@ interface FiltersContainerProps {
 }
 
 export const FiltersContainer = memo((props: FiltersContainerProps) => {
-  const {
-    className,
-  } = props;
+  const { className } = props;
 
   const {
     onChangeSort,

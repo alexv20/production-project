@@ -5,6 +5,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Sidebar } from './Sidebar';
 import { Theme } from '@/shared/const/theme';
+import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlags/FeatureFlagsDecorator';
 
 export default {
   title: 'widgets/Sidebar/Sidebar',
@@ -21,6 +22,13 @@ const Template: ComponentStory<typeof Sidebar> = (args) => (
 export const Light = Template.bind({});
 Light.args = {};
 Light.decorators = [StoreDecorator({ user: { authData: {} } })];
+
+export const LightRedesigned = Template.bind({});
+LightRedesigned.args = {};
+LightRedesigned.decorators = [
+  StoreDecorator({ user: { authData: {} } }),
+  FeatureFlagsDecorator({ isAppRedesigned: true }),
+];
 
 export const Dark = Template.bind({});
 Dark.args = {};

@@ -5,7 +5,7 @@ import { DropdownDirection } from '@/shared/types/ui';
 import { AppLink } from '../../../AppLink/AppLink';
 import cls from './Dropdown.module.scss';
 import { mapDirectionClass } from '../styles/consts';
-import popupCls from "../styles/popup.module.scss";
+import popupCls from '../styles/popup.module.scss';
 
 export interface DropdownItem {
   disabled?: boolean;

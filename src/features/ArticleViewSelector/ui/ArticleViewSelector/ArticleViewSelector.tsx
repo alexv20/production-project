@@ -53,23 +53,23 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
       feature="isAppRedesigned"
       on={
         <Card
-            className={classNames(cls.ArticleViewSelectorRedesigned, {}, [
+          className={classNames(cls.ArticleViewSelectorRedesigned, {}, [
             className,
-            ])}
-            border='round'
-          >
-            <HStack gap="8">
-              {viewTypes.map((viewType) => (
-                <Icon
-                  clickable
-                  onClick={onClick(viewType.view)}
-                  Svg={viewType.icon}
-                  className={classNames('', {
-                    [cls.selected]: viewType.view !== view,
-                  })}
-                />
-              ))}
-            </HStack>
+          ])}
+          border="round"
+        >
+          <HStack gap="8">
+            {viewTypes.map((viewType) => (
+              <Icon
+                clickable
+                onClick={onClick(viewType.view)}
+                Svg={viewType.icon}
+                className={classNames('', {
+                  [cls.selected]: viewType.view !== view,
+                })}
+              />
+            ))}
+          </HStack>
         </Card>
       }
       off={

@@ -4,6 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ArticleView } from '../../model/consts/consts';
 import { ArticleList } from './ArticleList';
 import { Article } from '../../model/types/article';
+import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlags/FeatureFlagsDecorator';
 
 export default {
   title: 'entities/Article/ArticleList',
@@ -19,14 +20,14 @@ const Template: ComponentStory<typeof ArticleList> = (args) => (
 
 const article = {
   id: '1',
-  title: 'Javascript news asfasjf asfjkask f',
+  title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',
   img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.02.2022',
   user: {
     id: '1',
-    username: 'Ulbi tv',
+    username: 'Alex',
     avatar:
       'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg',
   },
@@ -126,3 +127,29 @@ ListBig.args = {
   isLoading: false,
   view: ArticleView.LIST,
 };
+
+export const ListSmallRedesigned = Template.bind({});
+ListSmallRedesigned.args = {
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
+  isLoading: false,
+  view: ArticleView.GRID,
+};
+ListSmallRedesigned.decorators = [
+  FeatureFlagsDecorator({ isAppRedesigned: true }),
+];
+
+export const ListBigRedesigned = Template.bind({});
+ListBigRedesigned.args = {
+  articles: new Array(9).fill(0).map((item, index) => ({
+    ...article,
+    id: String(index),
+  })),
+  isLoading: false,
+  view: ArticleView.LIST,
+};
+ListBigRedesigned.decorators = [
+  FeatureFlagsDecorator({ isAppRedesigned: true }),
+];

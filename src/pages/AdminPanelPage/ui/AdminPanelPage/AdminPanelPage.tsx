@@ -17,7 +17,7 @@ const AdminPanelPage = memo((props: AdminPanelPageProps) => {
       data-testid="AdminPanelPage"
       className={classNames(cls.AdminPanelPage, {}, [className])}
     >
-      {t('Admin panel page')}
+      {t('Панель администратора')}
     </Page>
   );
 });

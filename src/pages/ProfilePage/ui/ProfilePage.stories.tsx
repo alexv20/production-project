@@ -7,6 +7,7 @@ import { Currency } from '@/entities/Currency';
 import avatar from '@/shared/assets/tests/AvatarImg.jpg';
 import ProfilePage from './ProfilePage';
 import { Theme } from '@/shared/const/theme';
+import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlags/FeatureFlagsDecorator';
 
 export default {
   title: 'pages/ProfilePage',
@@ -36,6 +37,26 @@ Normal.decorators = [
       },
     },
   }),
+];
+
+export const NormalRedesigned = Template.bind({});
+NormalRedesigned.args = {};
+NormalRedesigned.decorators = [
+  StoreDecorator({
+    profile: {
+      form: {
+        username: 'admin',
+        firstname: 'Alex',
+        lastname: 'Vasiliev',
+        age: 24,
+        city: 'Kazan',
+        country: Country.Russia,
+        currency: Currency.RUB,
+        avatar,
+      },
+    },
+  }),
+  FeatureFlagsDecorator({ isAppRedesigned: true }),
 ];
 
 export const Dark = Template.bind({});

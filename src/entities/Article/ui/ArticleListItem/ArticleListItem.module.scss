@@ -108,3 +108,9 @@
     width: 100%;
   }
 }
+
+.ArticleListItem {
+  &.GRID {
+    width: 230px;
+  }
+}

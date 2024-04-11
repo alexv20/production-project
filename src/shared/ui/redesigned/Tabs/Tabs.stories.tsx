@@ -6,7 +6,7 @@ import { ArticleType } from '@/entities/Article';
 import { Tabs } from './Tabs';
 
 export default {
-  title: 'shared/Tabs',
+  title: 'shared/redesigned/Tabs',
   component: Tabs,
   argTypes: {
     backgroundColor: { control: 'color' },

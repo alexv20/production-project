@@ -11,7 +11,7 @@ import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { Text } from '@/shared/ui/redesigned/Text';
 
 export const ProfileCardRedesignedError = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('profile');
 
   return (
     <HStack justify="center" max>
